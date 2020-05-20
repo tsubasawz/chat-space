@@ -8,21 +8,20 @@
 |password|string|null: false|
 ### Association
 - has_many :messages
-- has_many :groups, through
+- has_many :groups, through: :groups_users
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|groupname|string|null: false|
+|name|string|null: false|
 ### Association
 - has_many :messages
-- has_many :user, through
-
+- has_many :user, through: :groups_users
 
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|message|text|null: false|
+|message|text||
 |image|string||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
