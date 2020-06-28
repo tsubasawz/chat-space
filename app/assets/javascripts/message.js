@@ -20,7 +20,6 @@ $(function(){
           </div>`
         return html;
       } else {
-        //同様にdata-idが反映されるようにしている
         var html =
          `<div class="message" data-message-id=${message.id}>
             <div class="upper-message">
@@ -88,7 +87,6 @@ $('#new_message').on('submit', function(e){
       alert('error');
     });
   };
-  setInterval(reloadMessages, 7000);
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
     setInterval(reloadMessages, 7000);
   }
