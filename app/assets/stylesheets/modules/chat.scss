@@ -4,6 +4,7 @@
     box-sizing: border-box;
     height: 100px;
     padding: 0 40px;
+    border-bottom: solid 1px #eeeeee;
     .left-header {
       float: left;
       &__title {
@@ -32,6 +33,9 @@
       padding: 0 20px;
     }
   }
+      .edit {
+        color: $light_blue;
+      }
 
   .messages {
     background-color: #FAFAFA;
@@ -69,25 +73,34 @@
     box-sizing: border-box;
     height: 90px;
     padding: 20px 50px 20px 40px;
-    &__message {
-      border: none;
-      float: left;
+    .input-box {
+      width: calc(100% - 120px);
       height: 50px;
-      width: calc(100% - 150px);
-    }
-    &__mask {
-      background-color: $white;
+      display: flex;
       float: left;
-      height: 50px;
-      padding-right: 10px;
-      &__image {
-        font-size: 20px;
-        line-height: 50px;
+      position: relative;
+
+      .form__message {
+        border: none;
+        height: 50px;
+        width: 100%;
+        padding: 0 40px 0 10px;
       }
-      .hidden {
-        display: none;
+      .form__mask {
+        position: absolute;
+        right: 10px;
+        height: 50px;
+        padding-right: 10px;
+        &__image {
+          font-size: 20px;
+          line-height: 50px;
+        }
+        .hidden {
+          display: none;
+        }
       }
     }
+
     &__submit {
       background-color: $light_blue;
       border: none;
@@ -96,6 +109,7 @@
       font-size: 16px;
       height: 50px;
       margin-left: 15px;
+      margin-right: 0px;
       padding: 0 30px;
     }
   }
